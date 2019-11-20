@@ -1,0 +1,11 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+}
+
+.divprincipal{
+    margin: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
