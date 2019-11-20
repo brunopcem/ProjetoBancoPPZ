@@ -10,19 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label1" runat="server" Text="Código"></asp:Label>
-            <asp:TextBox runat="server" ReadOnly="True" />
-            <br />
-            <asp:Label ID="Label2" runat="server" Text="Nome"></asp:Label>
-            <asp:TextBox runat="server" />
-            <br />
-            <asp:Label ID="Label3" runat="server" Text="Data de Nascimento"></asp:Label>
-            <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
-            <br />
-            <asp:Label ID="Label4" runat="server" Text="Código"></asp:Label>
-            <asp:TextBox runat="server" />
-            <br />
-            <asp:Button Text="Salvar" runat="server" />
+           
         </div>
     </form>
 </body>
