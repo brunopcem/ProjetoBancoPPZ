@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ClienteEdit.aspx.cs" Inherits="TrabalhoBD.WebForm2" Theme="Skin1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VeiculoEdit.aspx.cs" Inherits="TrabalhoBD.VeiculoEdit" %>
 
 <!DOCTYPE html>
 
@@ -10,7 +10,6 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            
         </div>
     </form>
 </body>

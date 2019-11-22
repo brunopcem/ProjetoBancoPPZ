@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cliente.aspx.cs" Inherits="TrabalhoBD.WebForm1" Theme="Skin1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Veiculo.aspx.cs" Inherits="TrabalhoBD.Veiculo" %>
 
 <!DOCTYPE html>
 
@@ -9,16 +9,18 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="divprincipal">
-            <asp:GridView ID="GridView1" runat="server" CellPadding="4" DataSourceID="ObjectDataSource1" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" Width="800px" OnRowCommand="GridView1_RowCommand">
+        <div>
+            <asp:GridView ID="GridView1" runat="server" CellPadding="4" DataSourceID="ObjectDataSource1" AutoGenerateColumns="False" ForeColor="#333333" Width="800px" GridLines="None" OnRowCommand="GridView1_RowCommand">
                 <AlternatingRowStyle BackColor="#ecf2aa" />
                 <Columns>
                     <asp:BoundField DataField="id" HeaderText="Código" SortExpression="id" />
-                    <asp:BoundField DataField="nome" HeaderText="Nome" SortExpression="nome" />
-                    <asp:BoundField DataField="data_nascimento" DataFormatString="{0:d}" HeaderText="Data de Nascimento" SortExpression="data_nascimento" />
-                    <asp:BoundField DataField="cpf" HeaderText="CPF" SortExpression="cpf" />
-                    <asp:ButtonField Text="Editar" CommandName="edit" />
-                    <asp:ButtonField Text="Excluir" CommandName="del" />
+                    <asp:BoundField DataField="fabricante" HeaderText="Fabricante" SortExpression="fabricante" />
+                    <asp:BoundField DataField="modelo" HeaderText="Modelo" SortExpression="modelo" />
+                    <asp:BoundField DataField="ano_fabricacao" DataFormatString="{0:d}" HeaderText="Ano Fabricação" SortExpression="ano_fabricacao" />
+                    <asp:BoundField DataField="placa" HeaderText="Placa" SortExpression="placa" />
+                    <asp:BoundField DataField="uf" HeaderText="UF" SortExpression="uf" />
+                    <asp:ButtonField CommandName="editar" Text="Editar" />
+                    <asp:ButtonField CommandName="delete" Text="Delete" />
                 </Columns>
                 <EditRowStyle BackColor="#ecf2aa" />
                 <FooterStyle BackColor="#ecf2aa" Font-Bold="True" ForeColor="White" />
@@ -31,7 +33,7 @@
                 <sorteddescendingcellstyle backcolor="#ecf2aa" />
                 <sorteddescendingheaderstyle backcolor="#ecf2aa" />
             </asp:GridView>
-            <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectAll" TypeName="TrabalhoBD.DAL.ClienteDAL"></asp:ObjectDataSource>
+            <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectAll" TypeName="TrabalhoBD.DAL.VeiculoDAL"></asp:ObjectDataSource>
         </div>
     </form>
 </body>
