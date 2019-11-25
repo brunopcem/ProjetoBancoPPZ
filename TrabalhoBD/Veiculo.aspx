@@ -19,8 +19,8 @@
                     <asp:BoundField DataField="ano_fabricacao" DataFormatString="{0:d}" HeaderText="Ano Fabricação" SortExpression="ano_fabricacao" />
                     <asp:BoundField DataField="placa" HeaderText="Placa" SortExpression="placa" />
                     <asp:BoundField DataField="uf" HeaderText="UF" SortExpression="uf" />
-                    <asp:ButtonField CommandName="editar" Text="Editar" />
-                    <asp:ButtonField CommandName="delete" Text="Delete" />
+                    <asp:ButtonField CommandName="edit" Text="Editar" />
+                    <asp:ButtonField CommandName="del" Text="Deletar" />
                 </Columns>
                 <EditRowStyle BackColor="#ecf2aa" />
                 <FooterStyle BackColor="#ecf2aa" Font-Bold="True" ForeColor="White" />

@@ -13,5 +13,28 @@ namespace TrabalhoBD
         {
             
         }
+
+        protected void ButtonS_Click(object sender, EventArgs e)
+        {
+            Modelo.Cliente iCliente;
+            DAL.ClienteDAL iClienteDAL;
+            var data1 = Request["DATA"];
+
+
+            iCliente = new Modelo.Cliente(int.Parse(Session["id"].ToString()), TextBoxNOME.Text, DateTime.Parse(data1), TextBoxCPF.Text);
+
+
+            iClienteDAL = new DAL.ClienteDAL();
+
+
+            iClienteDAL.Update(iCliente);
+
+
+            Response.Redirect("~\\Cliente.aspx");
+        }
+
+
+
+
     }
 }
