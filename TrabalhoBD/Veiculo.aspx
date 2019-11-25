@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Veiculo.aspx.cs" Inherits="TrabalhoBD.Veiculo" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Veiculo.aspx.cs" Inherits="TrabalhoBD.Veiculo"  Theme="Skin1"%>
 
 <!DOCTYPE html>
 
@@ -9,7 +9,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="divprincipal">
             <asp:GridView ID="GridView1" runat="server" CellPadding="4" DataSourceID="ObjectDataSource1" AutoGenerateColumns="False" ForeColor="#333333" Width="800px" GridLines="None" OnRowCommand="GridView1_RowCommand">
                 <AlternatingRowStyle BackColor="#ecf2aa" />
                 <Columns>
@@ -33,6 +33,7 @@
                 <sorteddescendingcellstyle backcolor="#ecf2aa" />
                 <sorteddescendingheaderstyle backcolor="#ecf2aa" />
             </asp:GridView>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/VeiculoNovo.aspx">Novo</asp:HyperLink>
             <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectAll" TypeName="TrabalhoBD.DAL.VeiculoDAL"></asp:ObjectDataSource>
         </div>
     </form>

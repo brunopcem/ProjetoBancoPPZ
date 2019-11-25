@@ -102,5 +102,20 @@ namespace TrabalhoBD.DAL
             // Executa Comando
             cmd.ExecuteNonQuery();
         }
+
+        [DataObjectMethod(DataObjectMethodType.Insert)]
+        public void Insert(Modelo.Cliente obj)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand com = conn.CreateCommand();
+            SqlCommand cmd = new SqlCommand("INSERT INTO Cliente (nome, data_nascimento, cpf) VALUES(@nome, @data_nascimento, @cpf)", conn);
+            cmd.Parameters.AddWithValue("@nome", obj.nome);
+            cmd.Parameters.AddWithValue("@data_nascimento", obj.data_nascimento);
+            cmd.Parameters.AddWithValue("@cpf", obj.cpf);
+
+            cmd.ExecuteNonQuery();
+
+        }
     }
 }

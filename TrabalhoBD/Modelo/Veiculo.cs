@@ -10,7 +10,7 @@ namespace TrabalhoBD.Modelo
         public int id { get; set; }
         public string fabricante { get; set; }
         public string modelo { get; set; }
-        public DateTime ano_fabricacao { get; set; }
+        public int ano_fabricacao { get; set; }
         public string placa { get; set; }
         public string uf { get; set; }
 
@@ -19,12 +19,12 @@ namespace TrabalhoBD.Modelo
             this.id = 0;
             this.fabricante = "";
             this.modelo = "";
-            this.ano_fabricacao = DateTime.Now;
+            this.ano_fabricacao = 0;
             this.placa = "";
             this.uf = "";
         }
 
-        public Veiculo(int aid, string afabricante, string amodelo, DateTime aano_fabricacao, string aplaca, string auf)
+        public Veiculo(int aid, string afabricante, string amodelo, int aano_fabricacao, string aplaca, string auf)
         {
             this.id = aid;
             this.fabricante = afabricante;

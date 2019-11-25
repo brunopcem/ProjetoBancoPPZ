@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VeiculoEdit.aspx.cs" Inherits="TrabalhoBD.VeiculoEdit" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VeiculoEdit.aspx.cs" Inherits="TrabalhoBD.VeiculoEdit" Theme="Skin1" %>
 
 <!DOCTYPE html>
 

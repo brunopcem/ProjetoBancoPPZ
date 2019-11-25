@@ -35,7 +35,7 @@ namespace TrabalhoBD.DAL
                        Convert.ToInt32(dr["id"].ToString()),
                        dr["fabricante"].ToString(),
                        dr["modelo"].ToString(),
-                       Convert.ToDateTime(dr["ano_fabricacao"].ToString()),
+                       Convert.ToInt32(dr["ano_fabricacao"].ToString()),
                        dr["placa"].ToString(),
                        dr["uf"].ToString()
                        );
@@ -66,7 +66,7 @@ namespace TrabalhoBD.DAL
                         Convert.ToInt32(dr["id"].ToString()),
                         dr["fabricante"].ToString(),
                         dr["modelo"].ToString(),
-                        Convert.ToDateTime(dr["ano_fabricacao"].ToString()),
+                        Convert.ToInt32(dr["ano_fabricacao"].ToString()),
                         dr["placa"].ToString(),
                         dr["uf"].ToString()
                         );
@@ -107,6 +107,23 @@ namespace TrabalhoBD.DAL
 
             // Executa Comando
             cmd.ExecuteNonQuery();
+        }
+
+        [DataObjectMethod(DataObjectMethodType.Insert)]
+        public void Insert(Modelo.Veiculo obj)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand com = conn.CreateCommand();
+            SqlCommand cmd = new SqlCommand("INSERT INTO Veiculo (fabricante, modelo, ano_fabricacao, placa, uf) VALUES(@fabricante, @modelo, @ano_fabricacao, @placa, @uf)", conn);
+            cmd.Parameters.AddWithValue("@fabricante", obj.fabricante);
+            cmd.Parameters.AddWithValue("@modelo", obj.modelo);
+            cmd.Parameters.AddWithValue("@ano_fabricacao", obj.ano_fabricacao);
+            cmd.Parameters.AddWithValue("@placa", obj.placa);
+            cmd.Parameters.AddWithValue("@uf", obj.uf);
+
+            cmd.ExecuteNonQuery();
+
         }
     }
 }

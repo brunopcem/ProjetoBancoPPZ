@@ -31,6 +31,7 @@
                 <sorteddescendingcellstyle backcolor="#ecf2aa" />
                 <sorteddescendingheaderstyle backcolor="#ecf2aa" />
             </asp:GridView>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/ClienteNovo.aspx">Novo</asp:HyperLink>
             <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectAll" TypeName="TrabalhoBD.DAL.ClienteDAL"></asp:ObjectDataSource>
         </div>
     </form>
